@@ -31,3 +31,16 @@ if (getRandomInt() === 0) {
     }
 
 
+// function getHumanChoice() 
+// returns 'rock' 'paper' or 'scissors'
+// after user's input
+
+// GET user's choice
+// DISPLAY computer choice
+
+function getHumanChoice() {
+let hChoice = String(prompt('Enter "rock" "paper" or "scissors".' , ''));
+if (hChoice == 'rock' || hChoice == 'paper' || hChoice == 'scissors') { 
+    return getComputerChoice();
+}
+}
