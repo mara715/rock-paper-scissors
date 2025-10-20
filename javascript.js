@@ -58,21 +58,27 @@ function playRound(humanChoice , computerChoice) {
     switch(true) {
         case humanChoice==='rock' && computerChoice==='paper':
             console.log('You lose! Paper beats rock.');
+            ++computerScore;
             break;
         case humanChoice==='paper' && computerChoice==='rock':
             console.log('You win! Paper beats rock.');
+            ++humanScore;
             break;
         case humanChoice==='rock' && computerChoice==='scissors':
             console.log('You win! Rock beats scissors.');
+            ++humanScore;
             break;
         case humanChoice==='scissors' && computerChoice==='rock':
             console.log('You lose! Rock beats scissors.');
+            ++computerScore;
             break;
         case humanChoice==='paper' && computerChoice==='scissors':
             console.log('You lose! Scissors beat paper.');
+            ++computerScore;
             break;
         case humanChoice==='scissors' && computerChoice==='paper':
             console.log('You win! Scissors beat paper.');
+            ++humanScore;
             break;
         default:
             console.log('It\' a tie!');
