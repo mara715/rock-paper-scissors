@@ -39,8 +39,44 @@ if (getRandomInt() === 0) {
 // DISPLAY computer choice
 
 function getHumanChoice() {
-let hChoice = String(prompt('Enter "rock" "paper" or "scissors".' , ''));
-if (hChoice == 'rock' || hChoice == 'paper' || hChoice == 'scissors') { 
+let choice = String(prompt('Enter "rock" "paper" or "scissors".' , '')).toLowerCase();
+if (choice == 'rock' || choice == 'paper' || choice == 'scissors') { 
     return getComputerChoice();
 }
 }
+
+let humanScore = 0;
+let computerScore = 0;
+let computerChoice = getComputerChoice()
+let humanChoice = getHumanChoice()
+
+// case computer beats human
+// case human beats computer
+// case even
+
+function playRound(humanChoice , computerChoice) {
+    switch(true) {
+        case humanChoice==='rock' && computerChoice==='paper':
+            console.log('You lose! Paper beats rock.');
+            break;
+        case humanChoice==='paper' && computerChoice==='rock':
+            console.log('You win! Paper beats rock.');
+            break;
+        case humanChoice==='rock' && computerChoice==='scissors':
+            console.log('You win! Rock beats scissors.');
+            break;
+        case humanChoice==='scissors' && computerChoice==='rock':
+            console.log('You lose! Rock beats scissors.');
+            break;
+        case humanChoice==='paper' && computerChoice==='scissors':
+            console.log('You lose! Scissors beat paper.');
+            break;
+        case humanChoice==='scissors' && computerChoice==='paper':
+            console.log('You win! Scissors beat paper.');
+            break;
+        default:
+            console.log('It\' a tie!');
+            break;
+    }
+}
+
